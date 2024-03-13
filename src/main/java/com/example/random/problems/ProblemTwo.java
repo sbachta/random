@@ -23,31 +23,22 @@ public class ProblemTwo {
             List<Pair<Integer, Integer>> payments,
             Integer timeLimit
     ) {
+
         List<String> result = items("false");
 
-        if(payments.size() > 1) {
-            for(int i=1; i<=payments.size()-1; i++) {
-                System.out.println("Current payment " + payments.get(i));
-                System.out.println("Previous payment " + payments.get(i-1));
-                int j=i-1;
-                do {
-                    if (payments.get(i).equals(payments.get(i - 1))) {
-                        System.out.println("Last payments were equal");
-                        if ((timeStamps.get(i) - timeStamps.get(i - 1)) <= timeLimit) {
-                            System.out.println("Current payment was within timelimit of previous payment");
-                            result.add("true");
-                        } else {
-                            result.add("false");
-                        }
-                    } else {
-                        result.add("false");
-                    }
-
-                    j--;
-                }while(j>=0);
+        for (int i=1; i<=payments.size()-1; i++) {
+            for(int j=i-1; j>=0; j--) {
+                if (payments.get(i).equals(payments.get(j)) && ((timeStamps.get(i) - timeStamps.get(j)) < timeLimit) ||
+                    (payments.get(i).getFirst().equals(payments.get(i).getSecond()))) {
+                    result.add("true");
+                    break;
+                }
+                if(j==0){
+                    result.add("false");
+                }
             }
         }
-        return result;
 
+        return result;
     }
 }
