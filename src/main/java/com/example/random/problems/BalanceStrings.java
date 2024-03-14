@@ -28,30 +28,16 @@ public class BalanceStrings {
 
          */
 
-    //get overall length
-    //check odd vs even
-    //odd return no
-    //if even substring input to split into two different string arrays
-    //stream one side to reverse the second string array
-    //simple comparison to check if string are equal
-    //based on that return yes/no
-
-    //refactor stream the whole thing
-
     public BalanceStringResponse isBalanced(String input) {
+
         if((input.length() % 2 == 0)){
             final String first = input.substring(0, input.length()/2);
-            String second = input.substring((input.length()/2));
-            second = second.replace("]", "[");
-            second = second.replace("}", "{");
-            second = second.replace(")", "(");
-            String reversedSecond = "";
+            final String second = input.substring((input.length()/2))
+                                       .replace(")", "(")
+                                       .replace("}", "{")
+                                       .replace("]", "[");
 
-            for(int i=second.length()-1; i>=0; i--){
-                reversedSecond = reversedSecond.concat(second.substring(i, i+1));
-            }
-
-            if(first.equals(reversedSecond)){
+            if(first.contentEquals(new StringBuilder(second).reverse())){
                 return YES;
             }
         }
