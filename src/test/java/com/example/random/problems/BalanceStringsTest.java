@@ -1,7 +1,10 @@
 package com.example.random.problems;
 
+import com.example.random.models.BalanceStringResponse;
 import org.junit.jupiter.api.Test;
 
+import static com.example.random.models.BalanceStringResponse.NO;
+import static com.example.random.models.BalanceStringResponse.YES;
 import static org.assertj.core.api.Assertions.assertThat;
 
 class BalanceStringsTest {
@@ -12,27 +15,27 @@ class BalanceStringsTest {
     void shouldReturnNoWhenInputIsOdd() {
         final String input = "{[(])}}";
 
-        String actual = subject.isBalanced(input);
+        BalanceStringResponse actual = subject.isBalanced(input);
 
-        assertThat(actual).isEqualTo("NO");
+        assertThat(actual).isEqualTo(NO);
     }
 
     @Test
     void shouldReturnYesWhenInputIsEven() {
         final String input = "{{[[(())]]}}";
 
-        String actual = subject.isBalanced(input);
+        BalanceStringResponse actual = subject.isBalanced(input);
 
-        assertThat(actual).isEqualTo("YES");
+        assertThat(actual).isEqualTo(YES);
     }
 
     @Test
     void shouldReturnNoWhenInputIsEvenButNotBalanced() {
         final String input = "{{[[(())]]";
 
-        String actual = subject.isBalanced(input);
+        BalanceStringResponse actual = subject.isBalanced(input);
 
-        assertThat(actual).isEqualTo("NO");
+        assertThat(actual).isEqualTo(NO);
     }
 
 }

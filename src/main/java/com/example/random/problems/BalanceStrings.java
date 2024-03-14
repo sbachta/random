@@ -1,6 +1,10 @@
 package com.example.random.problems;
 
+import com.example.random.models.BalanceStringResponse;
 import org.springframework.stereotype.Component;
+
+import static com.example.random.models.BalanceStringResponse.NO;
+import static com.example.random.models.BalanceStringResponse.YES;
 
 @Component
 public class BalanceStrings {
@@ -32,10 +36,9 @@ public class BalanceStrings {
     //simple comparison to check if string are equal
     //based on that return yes/no
 
-    //refactor return type to be enum
     //refactor stream the whole thing
 
-    public String isBalanced(String input) {
+    public BalanceStringResponse isBalanced(String input) {
         if((input.length() % 2 == 0)){
             final String first = input.substring(0, input.length()/2);
             String second = input.substring((input.length()/2));
@@ -49,10 +52,10 @@ public class BalanceStrings {
             }
 
             if(first.equals(reversedSecond)){
-                return "YES";
+                return YES;
             }
         }
-        return "NO";
+        return NO;
     }
 
 }
