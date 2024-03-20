@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ContainsDuplicateTest {
+class _217_ContainsDuplicateTest {
 
-    private final ContainsDuplicate subject = new ContainsDuplicate();
+    private final _217_ContainsDuplicate subject = new _217_ContainsDuplicate();
 
     @Test
     void shouldReturnTrueWhenInputShowsUpTwice() {

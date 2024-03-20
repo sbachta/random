@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ValidAnagramTest {
+class Neat242ValidAnagramTest {
     
-    final ValidAnagram subject = new ValidAnagram();
+    final _242_ValidAnagram subject = new _242_ValidAnagram();
 
     @Test
     void shouldReturnFalseWhenInputIsNotValidAnagram() {

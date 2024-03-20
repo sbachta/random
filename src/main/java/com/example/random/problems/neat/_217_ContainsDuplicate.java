@@ -1,6 +1,6 @@
 package com.example.random.problems.neat;
 
-/*
+/**
 Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.
 
 Example 1:
@@ -22,7 +22,7 @@ Constraints:
 
 import java.util.HashSet;
 
-public class ContainsDuplicate {
+public class _217_ContainsDuplicate {
 
     public boolean containsDuplicate(int[] nums) {
         final HashSet<Integer> set = new HashSet<>();

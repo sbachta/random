@@ -31,7 +31,7 @@ import java.util.stream.IntStream;
  * 1 <= n <= 1000
  * 1 <= nums[i] <= 1000
  */
-public class ConcatArray {
+public class _1929_ConcatArray {
 
     public int[] getConcatenation(int[] nums) {
         return IntStream.concat(Arrays.stream(nums), Arrays.stream(nums)).toArray();

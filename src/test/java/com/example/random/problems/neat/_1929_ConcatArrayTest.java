@@ -4,9 +4,9 @@ import org.junit.jupiter.api.Test;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-class ConcatArrayTest {
+class _1929_ConcatArrayTest {
     
-    private final ConcatArray subject = new ConcatArray();
+    private final _1929_ConcatArray subject = new _1929_ConcatArray();
 
     @Test
     void shouldReturnIntArrayThatIsConcatOfInput() {

@@ -31,7 +31,7 @@ package com.example.random.problems.neat;
  * 1 <= arr[i] <= 105
  */
 
-public class ReplaceElementsArray {
+public class _1299_ReplaceElementsArray {
 
     public int[] replaceElements(int[] arr) {
         int max = -1;

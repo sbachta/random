@@ -6,7 +6,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class ReplaceElementsArrayTest {
     
-    private final ReplaceElementsArray subject = new ReplaceElementsArray();
+    private final _1299_ReplaceElementsArray subject = new _1299_ReplaceElementsArray();
 
     @Test
     void shouldReturnNegativeOneIfNoOtherElements() {

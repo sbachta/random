@@ -1,5 +1,5 @@
 package com.example.random.problems.neat;
-/*
+/**
 Given two strings s and t, return true if t is an anagram of s, and false otherwise.
 
 An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase,
@@ -23,9 +23,7 @@ Constraints:
 s and t consist of lowercase English letters.
  */
 
-import java.util.stream.Collectors;
-
-public class ValidAnagram {
+public class _242_ValidAnagram {
 
     public boolean isAnagram(String inputOne, String inputTwo) {
         return inputOne.contentEquals(new StringBuilder().append(inputTwo).reverse());
