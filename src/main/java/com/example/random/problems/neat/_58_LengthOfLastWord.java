@@ -1,7 +1,6 @@
 package com.example.random.problems.neat;
 
 import java.util.Arrays;
-import java.util.List;
 
 /**
  Given a string s consisting of words and spaces, return the length of the last word in the string.
@@ -35,8 +34,6 @@ public class _58_LengthOfLastWord {
 
     public int lengthOfLastWord(String s) {
 
-        List<String> words = Arrays.stream(s.split(" ")).toList();
-
-        return words.get(words.size()-1).length();
+        return Arrays.stream(s.split(" ")).toList().getLast().length();
     }
 }
